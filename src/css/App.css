@@ -4,6 +4,10 @@
   background-color: rgb(255, 247, 205);
 }
 
+body {
+  /* font-family: 'Geneva', sans-serif; */
+  font-weight: bolder;
+}
 
 /* body {
   background-color: rgb(255, 247, 205);
@@ -12,7 +16,11 @@
   flex-direction: column;
   justify-content: space-between;
 } */
+/* input[type=button] {
+  font-family: 'Times New Roman', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
 
+} */
 
 
 .Flashcardpage {
@@ -28,9 +36,12 @@
   align-items: center;
 }
 
+
+
 h1 {
   text-align: center;
   margin: 0;
+  font-weight: bolder;
 }
 
 .category-name {
@@ -45,45 +56,141 @@ h1 {
 
 .guage-guessed {
   margin-top: 100px;
-  font-size: 1em;
+  font-size: 1.5em;
   color: #AD937C;
   padding-bottom: 0;
-
+  text-align: left;
+  width: 100%;
+  padding-left: 25px;
+  height: 50px;
 }
 
 .accuracy {
-  font-size: 0.75em;
+  font-size: 1.5em;
   color: #AD937C;
   margin-bottom: 50px;
+  text-align: right;
+  margin-top: 35px;
+  width: 100%;
+  padding-right: 25px;
 }
+
+.back-card {
+  background-color: #F5F2ED;
+  display: block;
+  width: 90vw;
+  height: 55vw;
+  position: absolute;
+  top: 165px;
+  rotate: -10deg;
+}
+
 .word-to-guess {
   font-size: 3em;
   padding-top: 0;
-  color: #F5F2ED;
-  margin-bottom: 50px;
+  color: #8F5C38;
+  margin-bottom: 35px;
+  z-index: 2;
+  height: 50px;
+
 
 }
-
-.submit-guessed {
-  font-size: 0.75em;
+.result-correct {
+  font-size: 3em;
+  padding-top: 0;
+  color: #3edb2f;
+  margin-bottom: 35px;
+  z-index: 2;
+  height: 50px;
 }
+.result-incorrect {
+  font-size: 3em;
+  padding-top: 0;
+  color: #db2f2f;
+  margin-bottom: 35px;
+  z-index: 2;
+  height: 50px;
+  /* font-family: 'Geneva', sans-serif; */
+}
+.guess-wrapper {
+  background-color: #EAE4DE;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 80vw;
+  height: 50px;
+  align-items: center;
+}
+
+.button-next-card {
+  background-color: #6F1D1B;
+  z-index: 2;
+  width: 50vw;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+  border: none;
+  font-size: 2em;
+  color: #EAE4DE;
+  font-weight: bold;
+  border-radius: 50px;
+  /* font-family: 'Times New Roman', sans-serif; */
+  /* font-family: 'Geneva', sans-serif; */
+}
+
+/* .button-next-card {
+  background-color: #EAE4DE;
+  z-index: 2;
+  width: 80vw;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+  border: none;
+  font-size: 2em;
+  color: #2F2211;
+  font-weight: bold;
+  /* font-family: 'Times New Roman', sans-serif; */
+  /* font-family: 'Geneva', sans-serif; */
+
+
 
 .word-guessed {
-  background-color: #F5F2ED;
+  background-color: #EAE4DE;
+  background: none;
   color: #2F2211;
 
-  width: 70%;
+  width: calc(100% - 5px);
   height: 40px;
-
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border: none;
 
   font-size: 3em;
   text-align: center;
+  z-index: 3;
+
+  border-bottom: 2px solid #2F2211;
 
   /* margin-bottom: 25px; */
 }
 .submit-guess {
+  background-color: #2F2211;
+  color: #F5F2ED;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50px;
+  border: none;
+
+  font-size: 2em;
+  text-align: center;
+  margin-right: 5px;
+
+  z-index: 4;
+}
+
+/* .submit-guess {
   background-color: #2F2211;
   color: #F5F2ED;
 
@@ -95,7 +202,10 @@ h1 {
 
   font-size: 2em;
   text-align: center;
-}
+
+  z-index: 2;
+
+} */
 
 
 .Navbar {

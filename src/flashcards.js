@@ -4,9 +4,9 @@ const flashcards = [
         desc: "general words",
         cards: [
             {
-                german: "g1",
-                indonesian: "i1",
-                english: "e1"
+                german: "schwanz",
+                indonesian: "kontol",
+                english: "dick"
             },
             {
                 german: "g2",

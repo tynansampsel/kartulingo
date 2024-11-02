@@ -8,6 +8,8 @@ function Flashcardpage(props) {
     const [flashcards, setFlashcards] = useState([])
     const [currentFlashcardIndex, setCurrentFlashcardIndex] = useState(0)
     const [guessedWord, setGuessedWord] = useState("")
+    const [showResult, setShowResult] = useState(false)
+    const [correct, setCorrect] = useState(false)
 
     useEffect(() => {
         console.log("load")
@@ -41,7 +43,13 @@ function Flashcardpage(props) {
         }
 
         
+        setShowResult(true)
+        //setCurrentFlashcardIndex(currentFlashcardIndex+1)
+        setGuessedWord("")
+    }
 
+    const nextCard = (event) => {
+        setShowResult(false)
         setCurrentFlashcardIndex(currentFlashcardIndex+1)
         setGuessedWord("")
     }
@@ -82,6 +90,10 @@ function Flashcardpage(props) {
         return flashcards.length 
     }
 
+    const isCorrect = () => {
+        return flashcards[currentFlashcardIndex].correct
+    }
+
     return (
         <div className="Flashcardpage">
             {
@@ -89,17 +101,46 @@ function Flashcardpage(props) {
                     <>
                         {/* <h1 className="category-name" >{props.flashcards.name}</h1>
                         <h1 className="category-desc" >{props.flashcards.desc}</h1> */}
+                        <div className="back-card"></div>
                         <h1 className="guage-guessed" >{getGuessedCount() + " / " + getWordCount()}</h1>
-                        <h1 className="word-to-guess" >{flashcards[currentFlashcardIndex].german}</h1>
-                        <input
-                            className='word-guessed'
-                            name="name"
-                            type="text"
-                            value={guessedWord}
-                            onChange={handleChange}
-                        />
+
+                        {
+                            showResult 
+                            ? 
+                            <>
+                                <h1 className={isCorrect() ? "result-correct" : "result-incorrect"}>{flashcards[currentFlashcardIndex].indonesian}</h1>
+                                <button className="button-next-card" onClick={nextCard}>next! →</button>
+                            </>
+                            
+                            : 
+                            <>
+                                <h1 className="word-to-guess" >{flashcards[currentFlashcardIndex].german}</h1>
+                                <div class="guess-wrapper">
+                                    <input
+                                        className='word-guessed'
+                                        name="name"
+                                        type="text"
+                                        value={guessedWord}
+                                        onChange={handleChange}
+                                    />
+                                    <button className="submit-guess" onClick={submitGuess}>?</button>
+                                </div>
+                            </>
+                            
+                        }
+                        
+                        {/* <div class="guess-wrapper">
+                            <input
+                                className='word-guessed'
+                                name="name"
+                                type="text"
+                                value={guessedWord}
+                                onChange={handleChange}
+                            />
+                            <button className="submit-guess" onClick={submitGuess}>?</button>
+                        </div> */}
                         <h1 className="accuracy" >{getAccuracy() + "% Accuracy"}</h1>
-                        <button className="submit-guess" onClick={submitGuess}>guess</button>
+                        
                     </>
                     :
                     <h1>wait. . .</h1>
