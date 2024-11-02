@@ -25,12 +25,39 @@ function Flashcardpage(props) {
         })
         console.log(newFlashCards)
 
+        for (var i = newFlashCards.length - 1; i > 0; i--) { 
+       
+            // Generate random number 
+            var j = Math.floor(Math.random() * (i + 1));
+                       
+            var temp = newFlashCards[i];
+            newFlashCards[i] = newFlashCards[j];
+            newFlashCards[j] = temp;
+        }
+        console.log(newFlashCards)
+
         setFlashcards(newFlashCards)
     }, [])
 
     const handleChange = (event) => {
         setGuessedWord(event.target.value)
     }
+
+    // const shuffleCards = (flashCards) => {
+    //     let nflashCards = props.flashcards.cards.map(card => card)
+
+    //     for (var i = nflashCards.length - 1; i > 0; i--) { 
+       
+    //         // Generate random number 
+    //         var j = Math.floor(Math.random() * (i + 1));
+                       
+    //         var temp = nflashCards[i];
+    //         nflashCards[i] = nflashCards[j];
+    //         nflashCards[j] = temp;
+    //     }
+
+    //     return nflashCards
+    // }
 
     const submitGuess = (event) => {
         if (guessedWord == flashcards[currentFlashcardIndex].indonesian) {
@@ -49,9 +76,17 @@ function Flashcardpage(props) {
     }
 
     const nextCard = (event) => {
-        setShowResult(false)
-        setCurrentFlashcardIndex(currentFlashcardIndex+1)
-        setGuessedWord("")
+
+        
+        console.log(currentFlashcardIndex + " : "+flashcards.length)
+
+        if (currentFlashcardIndex >= (flashcards.length-1)){
+            console.log("YOU COMPLETED WITH A "+getAccuracy()+"% ACCURACY!")
+        } else {
+            setShowResult(false)
+            setCurrentFlashcardIndex(currentFlashcardIndex+1)
+            setGuessedWord("")
+        }
     }
 
     const updateFlashCard = (index, correct) => {
