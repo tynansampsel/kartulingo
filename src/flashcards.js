@@ -27,6 +27,56 @@ const flashcards = [
                 german: "g5",
                 indonesian: "i5",
                 english: "e5"
+            },
+            {
+                german: "schwanz1",
+                indonesian: "kontol1",
+                english: "dick1"
+            },
+            {
+                german: "g6",
+                indonesian: "i6",
+                english: "e6"
+            },
+            {
+                german: "g7",
+                indonesian: "i7",
+                english: "e7"
+            },
+            {
+                german: "g8",
+                indonesian: "i8",
+                english: "e8"
+            },
+            {
+                german: "g9",
+                indonesian: "i9",
+                english: "e9"
+            },
+            {
+                german: "schwanz2",
+                indonesian: "kontol2",
+                english: "dick2"
+            },
+            {
+                german: "g10",
+                indonesian: "i10",
+                english: "e10"
+            },
+            {
+                german: "g11",
+                indonesian: "i11",
+                english: "e11"
+            },
+            {
+                german: "g12",
+                indonesian: "i12",
+                english: "e12"
+            },
+            {
+                german: "g13",
+                indonesian: "i13",
+                english: "e13"
             }
         ]
 	}

@@ -1,15 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { useRef, useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
 function Flashcardpage(props) {
+
+	const navigate = useNavigate();
 
     const [flashcards, setFlashcards] = useState([])
     const [currentFlashcardIndex, setCurrentFlashcardIndex] = useState(0)
     const [guessedWord, setGuessedWord] = useState("")
     const [showResult, setShowResult] = useState(false)
     const [correct, setCorrect] = useState(false)
+
+
 
     useEffect(() => {
         console.log("load")
@@ -39,6 +43,8 @@ function Flashcardpage(props) {
         setFlashcards(newFlashCards)
     }, [])
 
+
+
     const handleChange = (event) => {
         setGuessedWord(event.target.value)
     }
@@ -60,7 +66,10 @@ function Flashcardpage(props) {
     // }
 
     const submitGuess = (event) => {
-        if (guessedWord == flashcards[currentFlashcardIndex].indonesian) {
+
+
+        console.log(guessedWord.toLowerCase()+" ? "+flashcards[currentFlashcardIndex].indonesian.toLowerCase())
+        if (guessedWord.toLowerCase() == flashcards[currentFlashcardIndex].indonesian.toLowerCase()) {
             console.log("correct")
             updateFlashCard(currentFlashcardIndex, true)
         } else {
@@ -75,6 +84,7 @@ function Flashcardpage(props) {
         setGuessedWord("")
     }
 
+
     const nextCard = (event) => {
 
         
@@ -82,6 +92,16 @@ function Flashcardpage(props) {
 
         if (currentFlashcardIndex >= (flashcards.length-1)){
             console.log("YOU COMPLETED WITH A "+getAccuracy()+"% ACCURACY!")
+
+            props.changeResults({
+                correct: getCorrectlyGuessed(),
+                all: flashcards.length,
+                accuracy: getAccuracy(),
+                cards: flashcards
+            })
+            console.log(flashcards)
+
+            navigate("/results")
         } else {
             setShowResult(false)
             setCurrentFlashcardIndex(currentFlashcardIndex+1)

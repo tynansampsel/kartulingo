@@ -5,13 +5,22 @@ import Homepage from './Homepage.js';
 import Flashcardpage from './Flashcardpage.js';
 import Navbar from './Navbar.js';
 import flashcards from './flashcards.js';
+import Resultspage from './Resultspage.js';
 
 function App() {
 
 	const [category, setCategory] = useState({})
+	const [results, setResults] = useState({})
+
+	//const navigate = useNavigate();
 
 	const goToFlashcard = () => {
 
+	}
+
+	const changeResults = (newResults) => {
+		setResults(newResults)
+		
 	}
 
 	return (
@@ -21,7 +30,8 @@ function App() {
 					<Navbar/>
 					<Routes>
 						<Route path='/' element={<Homepage goToFlashcard={goToFlashcard} />} />
-						<Route path='/flashcard' element={<Flashcardpage flashcards={flashcards[0]} />} />
+						<Route path='/flashcard' element={<Flashcardpage flashcards={flashcards[0]} changeResults={changeResults}/>} />
+						<Route path='/results' element={<Resultspage results={results}/>} />
 					</Routes>
 				</div>
 			</BrowserRouter>

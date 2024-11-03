@@ -11,7 +11,9 @@ function Homepage(props) {
     return (
         <div className="Homepage">
             <h1>choose category</h1>
-            <Link class="category-button" to="/flashcard">basic</Link>
+            <div className="category-list">
+                <Link class="category-button" to="/flashcard">basic</Link>
+            </div>
             {/* <div class="category-button" onClick={ () => {props.goToFlashcard() }}>basic</div> */}
         </div>
     );
