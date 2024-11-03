@@ -55,7 +55,7 @@ h1 {
 
 
 .guage-guessed {
-  margin-top: 100px;
+  margin-top: 70px; /*30*/
   font-size: 1.5em;
   color: #AD937C;
   padding-bottom: 0;
@@ -81,7 +81,7 @@ h1 {
   width: 90vw;
   height: 55vw;
   position: absolute;
-  top: 165px;
+  top: 135px;
   rotate: -10deg;
 }
 
@@ -334,6 +334,7 @@ h1 {
 .resultword-correct {
   color: #58c54c;
 }
+
 .resultword-incorrect {
   color: #db2f2f;
 }
