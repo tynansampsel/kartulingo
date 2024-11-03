@@ -11,7 +11,7 @@ function Navbar(props) {
 				<Link to="/#" className="logo">
 					<img className="logo" src={logo} alt="logo" />
 				</Link>
-				<h1 className='category-name'> - basic</h1>
+				<h1 className='category-name'>{props.category}</h1>
 		</div>
 	);
 }

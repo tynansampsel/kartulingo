@@ -9,7 +9,7 @@ import Resultspage from './Resultspage.js';
 
 function App() {
 
-	const [category, setCategory] = useState({})
+	const [category, setCategory] = useState("")
 	const [results, setResults] = useState({})
 
 	//const navigate = useNavigate();
@@ -20,17 +20,20 @@ function App() {
 
 	const changeResults = (newResults) => {
 		setResults(newResults)
-		
+	}
+
+	const getCategoryIndex = (cat) => {
+		return flashcards.findIndex(deck => deck.name == cat)
 	}
 
 	return (
 		<React.Fragment>
 			<BrowserRouter>
 				<div id="main-content">
-					<Navbar/>
+					<Navbar category={category}/>
 					<Routes>
-						<Route path='/' element={<Homepage goToFlashcard={goToFlashcard} />} />
-						<Route path='/flashcard' element={<Flashcardpage flashcards={flashcards[0]} changeResults={changeResults}/>} />
+						<Route path='/' element={<Homepage flashcards={flashcards} category={category} setCategory={setCategory} />} />
+						<Route path='/flashcard' element={<Flashcardpage flashcards={flashcards[getCategoryIndex(category)]} changeResults={changeResults}/>} />
 						<Route path='/results' element={<Resultspage results={results}/>} />
 					</Routes>
 				</div>

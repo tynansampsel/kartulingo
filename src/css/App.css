@@ -44,11 +44,7 @@ h1 {
   font-weight: bolder;
 }
 
-.category-name {
-  font-size: 1em;
-  color: #CBBBAB;
-  vertical-align: middle;
-}
+
 .category-desc {
   font-size: 0.75em;
 }
@@ -232,9 +228,11 @@ h1 {
   display: flex;
   justify-content: start;
   align-items: center;
+  flex-direction: column;
 }
 
-.category-list a {
+
+.category-list button {
   color: inherit;
   text-decoration: none;
   background: none;
@@ -281,7 +279,18 @@ h1 {
 
 .logo {
   max-height: 50px;
-  margin-right: 20px;
+  margin-right: 0px;
+}
+.category-name {
+  font-size: 1.5em;
+  color: #8F5C38;
+  vertical-align: bottom;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 5px;
 }
 
 .Resultspage {

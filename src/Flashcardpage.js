@@ -16,7 +16,11 @@ function Flashcardpage(props) {
 
 
     useEffect(() => {
-        console.log("load")
+        console.log(props.flashcards)
+
+        if (props.flashcards === undefined) return
+        if (props.flashcards.cards.length === 0) return
+
 
         let newFlashCards = props.flashcards.cards.map(card => {
             return {
@@ -66,12 +70,15 @@ function Flashcardpage(props) {
     // }
 
     const submitGuess = (event) => {
-
-
         console.log(guessedWord.toLowerCase()+" ? "+flashcards[currentFlashcardIndex].indonesian.toLowerCase())
         if (guessedWord.toLowerCase() == flashcards[currentFlashcardIndex].indonesian.toLowerCase()) {
             console.log("correct")
             updateFlashCard(currentFlashcardIndex, true)
+
+        } else if (guessedWord.toLowerCase() == flashcards[currentFlashcardIndex].english.toLowerCase()) {
+            console.log("correct")
+            updateFlashCard(currentFlashcardIndex, true)
+
         } else {
             console.log("incorrect")
             updateFlashCard(currentFlashcardIndex, false)
