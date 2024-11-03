@@ -16,10 +16,11 @@ function Flashcardpage(props) {
 
 
     useEffect(() => {
-        console.log(props.flashcards)
+        //console.log(props.flashcards)
 
         if (props.flashcards === undefined) return
-        if (props.flashcards.cards.length === 0) return
+        if (flashcards.length > 0) return
+        if (props.flashcards === undefined) return
 
 
         let newFlashCards = props.flashcards.cards.map(card => {
@@ -31,7 +32,8 @@ function Flashcardpage(props) {
                 correct: false
             }
         })
-        console.log(newFlashCards)
+
+        //console.log(newFlashCards)
 
         for (var i = newFlashCards.length - 1; i > 0; i--) { 
        
@@ -71,6 +73,7 @@ function Flashcardpage(props) {
 
     const submitGuess = (event) => {
         console.log(guessedWord.toLowerCase()+" ? "+flashcards[currentFlashcardIndex].indonesian.toLowerCase())
+
         if (guessedWord.toLowerCase() == flashcards[currentFlashcardIndex].indonesian.toLowerCase()) {
             console.log("correct")
             updateFlashCard(currentFlashcardIndex, true)
@@ -117,11 +120,12 @@ function Flashcardpage(props) {
     }
 
     const updateFlashCard = (index, correct) => {
-        let c = props.flashcards.cards.map(card => card)
+        let c = flashcards.map(card => card)
 
         c[currentFlashcardIndex].guessed = true
         c[currentFlashcardIndex].correct = correct
 
+        console.log(flashcards)
         setFlashcards(c)
     }
 

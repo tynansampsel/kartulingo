@@ -1,87 +1,36 @@
 const flashcards = [
-	{
-		name: "basic",
+    {
+        name: "basic",
         desc: "general words",
         cards: [
-            {
-                german: "schwanz",
-                indonesian: "kontol",
-                english: "dick"
-            },
-            {
-                german: "g2",
-                indonesian: "i2",
-                english: "e2"
-            },
-            {
-                german: "g3",
-                indonesian: "i3",
-                english: "e3"
-            },
-            {
-                german: "g4",
-                indonesian: "i4",
-                english: "e4"
-            },
-            {
-                german: "g5",
-                indonesian: "i5",
-                english: "e5"
-            },
-            {
-                german: "schwanz1",
-                indonesian: "kontol1",
-                english: "dick1"
-            },
-            {
-                german: "g6",
-                indonesian: "i6",
-                english: "e6"
-            },
-            {
-                german: "g7",
-                indonesian: "i7",
-                english: "e7"
-            },
-            {
-                german: "g8",
-                indonesian: "i8",
-                english: "e8"
-            },
-            {
-                german: "g9",
-                indonesian: "i9",
-                english: "e9"
-            },
-            {
-                german: "schwanz2",
-                indonesian: "kontol2",
-                english: "dick2"
-            },
-            {
-                german: "g10",
-                indonesian: "i10",
-                english: "e10"
-            },
-            {
-                german: "g11",
-                indonesian: "i11",
-                english: "e11"
-            },
-            {
-                german: "g12",
-                indonesian: "i12",
-                english: "e12"
-            },
-            {
-                german: "g13",
-                indonesian: "i13",
-                english: "e13"
-            }
+            { german: "der", indonesian: "itu", english: "the (masculine)" },
+            { german: "die", indonesian: "itu", english: "the (feminine)" },
+            { german: "das", indonesian: "itu", english: "the (neuter)" },
+            { german: "und", indonesian: "dan", english: "and" },
+            { german: "sein", indonesian: "menjadi", english: "to be" },
+            { german: "in", indonesian: "di", english: "in" },
+            { german: "ein", indonesian: "sebuah", english: "a/an (masculine/neuter)" },
+            { german: "zu", indonesian: "ke", english: "to" },
+            { german: "haben", indonesian: "memiliki", english: "to have" },
+            { german: "ich", indonesian: "saya", english: "I" },
+            { german: "werden", indonesian: "menjadi", english: "to become" },
+            { german: "sie", indonesian: "dia", english: "she/they" },
+            { german: "von", indonesian: "dari", english: "from" },
+            { german: "nicht", indonesian: "tidak", english: "not" },
+            { german: "mit", indonesian: "dengan", english: "with" },
+            { german: "es", indonesian: "itu", english: "it" },
+            { german: "so", indonesian: "jadi", english: "so" },
+            { german: "an", indonesian: "pada", english: "at/on" },
+            { german: "für", indonesian: "untuk", english: "for" },
+            { german: "aber", indonesian: "tetapi", english: "but" },
+            { german: "all", indonesian: "semua", english: "all" },
+            { german: "wenn", indonesian: "jika", english: "if" },
+            { german: "oder", indonesian: "atau", english: "or" },
+            { german: "das", indonesian: "itu", english: "that" }
         ]
-	},
+    },
     {
-		name: "colors",
+        name: "colors",
         desc: "colors!",
         cards: [
             {
@@ -205,10 +154,10 @@ const flashcards = [
                 english: "indigo"
             }
         ]
-        
-	},
+
+    },
     {
-		name: "test",
+        name: "test",
         desc: "general words",
         cards: [
             {
@@ -217,7 +166,219 @@ const flashcards = [
                 english: "dick"
             }
         ]
-	}
+    },
+    {
+        name: "animals",
+        desc: "general words",
+        cards: [
+            {
+                german: "Hund",
+                indonesian: "anjing",
+                english: "dog"
+            },
+            {
+                german: "Katze",
+                indonesian: "kucing",
+                english: "cat"
+            },
+            {
+                german: "Vogel",
+                indonesian: "burung",
+                english: "bird"
+            },
+            {
+                german: "Fisch",
+                indonesian: "ikan",
+                english: "fish"
+            },
+            {
+                german: "Kuh",
+                indonesian: "sapi",
+                english: "cow"
+            },
+            {
+                german: "Schwein",
+                indonesian: "babi",
+                english: "pig"
+            },
+            {
+                german: "Pferd",
+                indonesian: "kuda",
+                english: "horse"
+            },
+            {
+                german: "Huhn",
+                indonesian: "ayam",
+                english: "chicken"
+            },
+            {
+                german: "Schaf",
+                indonesian: "domba",
+                english: "sheep"
+            },
+            {
+                german: "Ente",
+                indonesian: "bebek",
+                english: "duck"
+            },
+            {
+                german: "Löwe",
+                indonesian: "singa",
+                english: "lion"
+            },
+            {
+                german: "Tiger",
+                indonesian: "harimau",
+                english: "tiger"
+            },
+            {
+                german: "Bär",
+                indonesian: "beruang",
+                english: "bear"
+            },
+            {
+                german: "Wolf",
+                indonesian: "serigala",
+                english: "wolf"
+            },
+            {
+                german: "Affe",
+                indonesian: "monyet",
+                english: "monkey"
+            },
+            {
+                german: "Kaninchen",
+                indonesian: "kelinci",
+                english: "rabbit"
+            },
+            {
+                german: "Fuchs",
+                indonesian: "rubah",
+                english: "fox"
+            },
+            {
+                german: "Schlange",
+                indonesian: "ular",
+                english: "snake"
+            },
+            {
+                german: "Eule",
+                indonesian: "burung hantu",
+                english: "owl"
+            },
+            {
+                german: "Elefant",
+                indonesian: "gajah",
+                english: "elephant"
+            }
+        ]
+    },
+    {
+        name: "food",
+        desc: "general words",
+        cards: [
+            {
+                german: "Apfel",
+                indonesian: "apel",
+                english: "apple"
+            },
+            {
+                german: "Banane",
+                indonesian: "pisang",
+                english: "banana"
+            },
+            {
+                german: "Brot",
+                indonesian: "roti",
+                english: "bread"
+            },
+            {
+                german: "Käse",
+                indonesian: "keju",
+                english: "cheese"
+            },
+            {
+                german: "Eier",
+                indonesian: "telur",
+                english: "eggs"
+            },
+            {
+                german: "Fisch",
+                indonesian: "ikan",
+                english: "fish"
+            },
+            {
+                german: "Reis",
+                indonesian: "nasi",
+                english: "rice"
+            },
+            {
+                german: "Kartoffel",
+                indonesian: "kentang",
+                english: "potato"
+            },
+            {
+                german: "Nudel",
+                indonesian: "mie",
+                english: "noodles"
+            },
+            {
+                german: "Tomate",
+                indonesian: "tomat",
+                english: "tomato"
+            },
+            {
+                german: "Hähnchen",
+                indonesian: "ayam",
+                english: "chicken"
+            },
+            {
+                german: "Salat",
+                indonesian: "selada",
+                english: "lettuce"
+            },
+            {
+                german: "Zucker",
+                indonesian: "gula",
+                english: "sugar"
+            },
+            {
+                german: "Salz",
+                indonesian: "garam",
+                english: "salt"
+            },
+            {
+                german: "Kaffee",
+                indonesian: "kopi",
+                english: "coffee"
+            },
+            {
+                german: "Milch",
+                indonesian: "susu",
+                english: "milk"
+            },
+            {
+                german: "Wasser",
+                indonesian: "air",
+                english: "water"
+            },
+            {
+                german: "Orangensaft",
+                indonesian: "jus jeruk",
+                english: "orange juice"
+            },
+            {
+                german: "Bohnen",
+                indonesian: "kacang",
+                english: "beans"
+            },
+            {
+                german: "Suppe",
+                indonesian: "sup",
+                english: "soup"
+            }
+        ]
+    }
 ]
 
 
