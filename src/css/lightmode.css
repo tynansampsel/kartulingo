@@ -1,0 +1,105 @@
+.Homepage {
+    background-color: #fff7cd;
+}
+
+.Flashcardpage {
+    background-color: #CBBBAB;
+
+}
+
+
+.guage-guessed {
+    color: #AD937C;
+}
+
+.accuracy {
+    color: #AD937C;
+}
+
+.back-card {
+    background-color: #F5F2ED;
+}
+
+.word-to-guess {
+    color: #8F5C38;
+}
+
+.result-correct {
+    color: #3edb2f;
+}
+
+.result-incorrect {
+    color: #db2f2f;
+}
+
+.guess-wrapper {
+    background-color: #EAE4DE;
+}
+
+.button-next-card {
+    background-color: #6F1D1B;
+    color: #EAE4DE;
+}
+
+
+
+.word-guessed {
+    background-color: #EAE4DE;
+    color: #2F2211;
+}
+
+.submit-guess {
+    background-color: #2F2211;
+    color: #F5F2ED;
+}
+
+
+
+.Homepage {
+    background-color: #CBBBAB;
+    color: #AD937C;
+}
+
+
+
+.category-list button {
+    color: #8F5C38;
+    background-color: #F5F2ED;
+}
+
+.category-list a:visited {
+    color: #8F5C38;
+}
+
+.category-list a:hover {
+    color: #AD937C;
+}
+
+.Navbar {
+    background-color: #2F2211;
+}
+
+.category-name {
+    color: #8F5C38;
+}
+
+.Resultspage {
+    background-color: #CBBBAB;
+    color: #AD937C;
+}
+
+.resultWord {
+    background-color: #CBBBAB;
+}
+
+.resultWord:nth-of-type(2n+1) {
+    background-color: #c7ae98;
+}
+
+.resultword-correct {
+    color: #58c54c;
+}
+
+.resultword-incorrect {
+    color: #db2f2f;
+}

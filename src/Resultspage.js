@@ -9,7 +9,7 @@ function Resultspage(props) {
     return (
         <div className="Resultspage">
             {
-                <h1>{"You got "+props.results.correct+" out of "+props.results.all+" correct, with an accuracy of "+props.results.accuracy+"%."}</h1>
+                <h1  className="Resultspage-title">{"You got "+props.results.correct+" out of "+props.results.all+" correct, with an accuracy of "+props.results.accuracy+"%."}</h1>
             }
             <div className="result-list">
             {

@@ -6,6 +6,7 @@ import Flashcardpage from './Flashcardpage.js';
 import Navbar from './Navbar.js';
 import flashcards from './flashcards.js';
 import Resultspage from './Resultspage.js';
+import './css/lightmode.css';
 
 function App() {
 

@@ -1,6 +1,7 @@
 
 
 .Homepage {
+  background-color: rgb(255, 247, 205);
 }
 
 body {
@@ -23,6 +24,7 @@ body {
 
 
 .Flashcardpage {
+  background-color: #CBBBAB;
   
   width: 100%;
   height: calc(100vh - 50px);
@@ -51,6 +53,7 @@ h1 {
 .guage-guessed {
   margin-top: 70px; /*30*/
   font-size: 1.5em;
+  color: #AD937C;
   padding-bottom: 0;
   text-align: left;
   width: 100%;
@@ -60,6 +63,7 @@ h1 {
 
 .accuracy {
   font-size: 1.5em;
+  color: #AD937C;
   margin-bottom: 50px;
   text-align: right;
   margin-top: 35px;
@@ -68,6 +72,7 @@ h1 {
 }
 
 .back-card {
+  background-color: #F5F2ED;
   display: block;
   width: 90vw;
   height: 55vw;
@@ -79,6 +84,7 @@ h1 {
 .word-to-guess {
   font-size: 3em;
   padding-top: 0;
+  color: #8F5C38;
   margin-bottom: 35px;
   z-index: 2;
   height: 50px;
@@ -88,6 +94,7 @@ h1 {
 .result-correct {
   font-size: 3em;
   padding-top: 0;
+  color: #3edb2f;
   margin-bottom: 35px;
   z-index: 2;
   height: 50px;
@@ -95,13 +102,14 @@ h1 {
 .result-incorrect {
   font-size: 3em;
   padding-top: 0;
+  color: #db2f2f;
   margin-bottom: 35px;
   z-index: 2;
   height: 50px;
   /* font-family: 'Geneva', sans-serif; */
 }
 .guess-wrapper {
-
+  background-color: #EAE4DE;
   z-index: 2;
   display: flex;
   flex-direction: row;
@@ -112,7 +120,7 @@ h1 {
 }
 
 .button-next-card {
-
+  background-color: #6F1D1B;
   z-index: 2;
   width: 50vw;
   height: 50px;
@@ -120,7 +128,7 @@ h1 {
   text-align: center;
   border: none;
   font-size: 2em;
-
+  color: #EAE4DE;
   font-weight: bold;
   border-radius: 50px;
   /* font-family: 'Times New Roman', sans-serif; */
@@ -144,8 +152,9 @@ h1 {
 
 
 .word-guessed {
-
+  background-color: #EAE4DE;
   background: none;
+  color: #2F2211;
 
   width: calc(100% - 5px);
   height: 40px;
@@ -156,11 +165,13 @@ h1 {
   text-align: center;
   z-index: 3;
 
+  border-bottom: 2px solid #2F2211;
 
   /* margin-bottom: 25px; */
 }
 .submit-guess {
-
+  background-color: #2F2211;
+  color: #F5F2ED;
 
   width: 40px;
   height: 40px;
@@ -193,7 +204,8 @@ h1 {
 } */
 
 .Homepage {
-
+  background-color: #CBBBAB;
+  
   width: 100%;
   height: calc(100vh - 50px);
   /* margin-left: 50%;
@@ -202,7 +214,7 @@ h1 {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-
+  color: #AD937C;
 }
 
 
@@ -238,11 +250,19 @@ h1 {
   width: 80vw;
   margin-bottom: 10px;
 
-
+  color: #8F5C38;
+  background-color: #F5F2ED;
   border-radius: 25px;
 
 }
 
+.category-list a:visited {
+  color: #8F5C38;
+}
+
+.category-list a:hover {
+  color: #AD937C;
+}
 
 .Navbar {
   height: 50px;
@@ -253,7 +273,7 @@ h1 {
 
   justify-content: start;
 
-
+  background-color: #2F2211;
   /* box-shadow: 0px 4px 32px 6px rgba(0, 0, 0, 1); */
 }
 
@@ -263,7 +283,7 @@ h1 {
 }
 .category-name {
   font-size: 1.5em;
-
+  color: #8F5C38;
   vertical-align: bottom;
   text-align: left;
 
@@ -274,6 +294,8 @@ h1 {
 }
 
 .Resultspage {
+  background-color: #CBBBAB;
+  
   width: 100%;
   height: calc(100vh - 50px);
   /* margin-left: 50%;
@@ -282,6 +304,7 @@ h1 {
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  color: #AD937C;
 }
 
 .Resultspage-title {
@@ -311,4 +334,21 @@ h1 {
   z-index: 2;
   height: 50px;
   width: 100%;
+  background-color: #CBBBAB;
+}
+
+/* .result-list:nth-child(3n+1) {
+  background-color: #ffffff;
+} */
+
+.resultWord:nth-of-type(2n+1) {
+  background-color: #c7ae98;
+}
+
+.resultword-correct {
+  color: #58c54c;
+}
+
+.resultword-incorrect {
+  color: #db2f2f;
 }
